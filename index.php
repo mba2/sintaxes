@@ -1,13 +1,15 @@
 <?php
-  // if(isset($_POST['submit'])) {
-  //   $username = $_POST['username'];
-  //   $password = $_POST['password'];
-  //
-  //   echo $username;
-  //   echo $password;
-  $connection = mysqli_connect();
-    // mysqli_connect("localhost","u845380189_eniac","eniac2016","u845380189_sint");
- // }
+  if(isset($_POST['submit'])) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    echo $username;
+    echo $password;
+
+    $conexao = mysqli_connect("localhost","u845380189_eniac","eniac2016","u845380189_sint");
+
+    print_r($conexao);
+ }
 
 ?>
 
