@@ -40,7 +40,7 @@ if(isset($_POST['lastQuery'])){
     }
     //SET THE CURRENT DATABASE//
     // $currDB = "syntaxes";        //LOCAL//
-    $currDB = "`cl58-syntaxes`";    //REMOTE//
+    $currDB = "`u845380189_sint`";    //REMOTE//
     //SET THE CURRENT MAIN TABLE//
     $currTB = "`syntax`";
     //CREATE A FILTER -> AN ARRAY CONTAINING AN CONDITION EACH LANGUAGE THAT WILL BE USED IN THE SELECT QUERY --> getLangs()//
@@ -55,7 +55,7 @@ if(isset($_POST['lastQuery'])){
     $sqlFilter2->addCondition($condition01)->addCondition($condition02)->setBoolOp("AND");
     // print_r($sqlFilter2);
     //CREATE A SELECT STATEMENT CLASS//
-      $selectSQL = (new SelectSQL("{$currDB}.{$currTB}","language.languageDesc,{$currTB}.syntaxID,{$currTB}.syntaxBody,{$currTB}.syntaxDesc,{$currTB}.syntaxNotes"));
+    $selectSQL = (new SelectSQL("{$currDB}.{$currTB}","language.languageDesc,{$currTB}.syntaxID,{$currTB}.syntaxBody,{$currTB}.syntaxDesc,{$currTB}.syntaxNotes"));
     // $selectSQL->join("INNER","syntaxes.language","languageID")->where($sqlFilter)->convertToStr();
     $selectSQL->join("INNER","{$currDB}.language","languageID")->where($sqlFilter)->where($sqlFilter2)->convertToStr();
     //SAVE THE QUERY IN A $_SESSION VARIABLE//
@@ -64,6 +64,9 @@ if(isset($_POST['lastQuery'])){
 
 ///CONNECT TO THE DATABASE//
 $conn = DB::connect();
+
+// echo $selectSQL;
+// exit();
 //PERFORM A QUERY//
 $query = $conn->query($selectSQL);
 //STORE THE RESULT OF AFFECTED ROWS//

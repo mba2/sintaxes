@@ -16,7 +16,7 @@ if(empty($_POST)){
   $conn = DB::connect();
   //SET THE CURRENT DATABASE//
   // $currDB = "syntaxes";        //LOCAL//
-  $currDB = "`cl58-syntaxes`";    //REMOTE//
+  $currDB = "`u845380189_sint`";    //REMOTE//
   //SET THE CURRENT MAIN TABLE//
   $currTB = "`example`";
   //CREATE A DELETE SQL STATEMENT//
@@ -28,8 +28,8 @@ if(empty($_POST)){
   $filter->addCondition($cond);
   //ADD THIS FILTER INTO THE DELETE STATEMENT//
   $deleteExamples = $deleteExamples->where($filter)->convertToStr();
-  echo "<pre>";
-  print_r($deleteExamples);
+  // echo "<pre>";
+  // print_r($deleteExamples);
   //PERFORM THE QUERY//
   $query = $conn->query($deleteExamples);
 
