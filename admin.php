@@ -5,7 +5,7 @@ if(mysqli_connect_errno()) {
   die("Não foi possível se conectar ao banco de dados: ". mysqli_connect_error());
 }
 
-$query = "SELECT * FROM usuario";
+$query = "SELECT * FROM `u845380189_sint`.`usuario`";
 $result = mysqli_query($connection,$query) or die("Erro: " . mysqli_error($connection));
 
 ?>
