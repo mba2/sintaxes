@@ -1,0 +1,22 @@
+{
+  "name": "sintaxes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mba2/sintaxes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mba2/sintaxes/issues"
+  },
+  "homepage": "https://github.com/mba2/sintaxes#readme",
+  "devDependencies": {
+    "grunt-contrib-copy": "^1.0.0"
+  }
+}

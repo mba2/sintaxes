@@ -61,7 +61,7 @@ if($result < 1 || $result > 1){
   echo json_encode(
                   array(
                         'status' => "error",
-                        'msg'    => "Sorry, syntax could not be saved on the database."
+                        'msg'    => "Não foi possível salvar os dados no BD."
                        )
                   );
   $conn = null;
@@ -92,7 +92,7 @@ else{
   echo json_encode(
                     array(
                           'status'    => 'success',
-                          'msg'       => 'New Syntax Saved!',
+                          'msg'       => 'Nova sintaxe adicionada!',
                           'syntaxID'  => $syntaxID
                         )
                   );
@@ -108,7 +108,7 @@ catch(PDOException $e){
   echo json_encode(
                   array(
                         'status'  => "error",
-                        'msg'     => "Sorry, syntax could not be saved on the database.",
+                        'msg'     => "Não foi possível salvar os dados no BD.",
                         'addInfo' => "{$error}"
                        )
                   );

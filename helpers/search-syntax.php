@@ -30,12 +30,12 @@ if(isset($_POST['lastQuery'])){
 
     //IF NO LANGUAGE IS SELECTED...ECHO A JSON 'LOG' AND CLOSE THE PROGRAM//
     if(empty($chosenLangs)){
-      echo json_encode(array("status"=>"no language selected","msg"=>"Plese, select least one language"));
+      echo json_encode(array("status"=>"no language selected","msg"=>"Por favor, selecione ao menos uma linguagem"));
       return false;
     }
     //IF NO TEXT IS PASSED TO PERFORM A SEARCH... ECHO A JSON 'LOG' AND CLOSE THE PROGRAM//
     if(empty($givenString)){
-      echo json_encode(array("status"=>"no string passed","msg"=>"Please, fill the search field with some text."));
+      echo json_encode(array("status"=>"no string passed","msg"=>"Por favor, digite algum texto."));
       return false;
     }
     //SET THE CURRENT DATABASE//
@@ -75,7 +75,7 @@ $affectedRows = $query->rowCount();
 $result = $query->fetchAll(PDO::FETCH_ASSOC);
 //IF NOTHING IS RETURNED... ECHO A JSON 'LOG' AND CLOSE THE PROGRAM//
 if(empty($result)){
-  echo json_encode(array("status"=>"no results found","msg"=>"No results were found. Please, type again"));
+  echo json_encode(array("status"=>"no results found","msg"=>"Nenhum resultado encontrado."));
   return false;
 }
 //ECHO THE QUERY RESULT//

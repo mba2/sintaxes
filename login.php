@@ -38,14 +38,14 @@
   </head>
   <body>
 
-    <main class="container-fluid">
+    <main class="container-fluid login-main-container">
       <div class="row">
         <div class="col-xs-12">
-          <h1>bem vindo ao guia de sintaxes - faça seu login</h1>
+          <h1 class="login-title">bem vindo ao guia de sintaxes <span>faça seu login</span></h1>
         </div>
       </div>
       <div class="row">
-        <div class="col-xs-12 col-md-6">
+        <div class="col-xs-12 col-md-12 form-area">
           <form class="" id="" action="login.php" method="post">
               <div class="form-group">
                 <input type="text" id="" class="form-control" name="username">
@@ -56,10 +56,10 @@
               </div>
 
               <div class="form-group">
-                <input type="submit" id="" class="btn btn-block btn-primary" name="submit" value="login">
+                <input type="submit" id="" class="btn btn-block btn-primary submit-btn" name="submit" value="login">
               </div>
           </form>
-          <a href="novo-usuario.php">Criar novo usuário</a>
+          <a href="novo-usuario.php" class="btn btn-success">novo usuário</a>
         </div>
       </div>
     </main>

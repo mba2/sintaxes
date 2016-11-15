@@ -32,6 +32,7 @@ INSERT INTO syntax VALUES
 (NULL,1,'if(condition){code case true}else{code case false}','normal if/else',''),
 (NULL,2,'$varName = value','Create a variable',NULL);
 
+
 DROP TABLE IF EXISTS example;
 CREATE TABLE example(
   exampleID INT AUTO_INCREMENT NOT NULL,
